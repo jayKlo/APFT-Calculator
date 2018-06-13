@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import PushUpCalc
 import SitUpCalc
 import RunCalc
@@ -26,11 +27,13 @@ def main():
     PUscore = PushUpCalc.PushUpCalc(pushups,AgeBracket,gender)
     SUscore = SitUpCalc.SitUpCalc(situps,AgeBracket)
     Runscore = RunCalc.RunCalc(runtime,AgeBracket,gender)
-    print ("Age Group #{}".format(AgeBracket))
+    TotalScore = (PUscore + SUscore + Runscore)
+    print ("Age Group {}".format(AgeBracket))
     print ("Gender is: {}".format(gender))
     print ("Pushup score {} ".format(PUscore))
     print ("Situp score {} ".format(SUscore))
     print ("Run score {} ".format(Runscore))
+    print ("Total score {}".format(TotalScore))
 
 if __name__ == "__main__":
     main()
