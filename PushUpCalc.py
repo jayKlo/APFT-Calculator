@@ -25,9 +25,51 @@ male17_21PUScore = [3, 5, 6, 8, 9, 10, 12, 13, 14, 16, 17, 19, 20, 21, 23, 24, 2
 #Push Reps
 PushupReps = [i for i in range(1,78)]
 
-def PushUpCalc(pushups,AgeGroup):
-    if (AgeGroup == '17-21'):
-        PUScore = female17_21PUScore[int(PushupReps.index(pushups))]
+female = ['f','F']
+
+def PushUpCalc(pushups,AgeGroup,gender):
+    if gender in female:
+        if (AgeGroup == '17-21'):
+            PUScore = female17_21PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '22-26'):
+            PUScore = female22_26PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '27-31'):
+            PUScore = female27_31PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '32-36'):
+            PUScore = female32_36PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '37-41'):
+            PUScore = female37_41PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '42-46'):
+            PUScore = female42_46PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '47-51'):
+            PUScore = female47_51PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '52-56'):
+            PUScore = female52_56PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '57-61'):
+            PUScore = female57_61PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '62+'):
+            PUScore = female62PUScore[int(PushupReps.index(pushups))]
+    else:
+        if (AgeGroup == '17-21'):
+            PUScore = male17_21PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '22-26'):
+            PUScore = male22_26PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '27-31'):
+            PUScore = male27_31PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '32-36'):
+            PUScore = male32_36PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '37-41'):
+            PUScore = male37_41PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '42-46'):
+            PUScore = male42_46PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '47-51'):
+            PUScore = male47_51PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '52-56'):
+            PUScore = male52_56PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '57-61'):
+            PUScore = male57_61PUScore[int(PushupReps.index(pushups))]
+        if (AgeGroup == '62+'):
+            PUScore = male62PUScore[int(PushupReps.index(pushups))]
     return PUScore
 
 if __name__ == "__main__":

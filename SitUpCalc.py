@@ -16,6 +16,24 @@ SitupReps = [i for i in range(21,82)]
 def SitUpCalc(situps,AgeGroup):
     if (AgeGroup == '17-21'):
         SUScore = maleFemale17_21SUScore[int(SitupReps.index(situps))]
+    if (AgeGroup == '22-26'):
+        SUScore = maleFemale22_26SUScore[int(SitupReps.index(situps))]
+    if (AgeGroup == '27-31'):
+        SUScore = maleFemale27_31SUScore[int(SitupReps.index(situps))]
+    if (AgeGroup == '32-36'):
+        SUScore = maleFemale32_36SUScore[int(SitupReps.index(situps))]
+    if (AgeGroup == '37-41'):
+        SUScore = maleFemale37_41SUScore[int(SitupReps.index(situps))]
+    if (AgeGroup == '42-46'):
+        SUScore = maleFemale42_46SUScore[int(SitupReps.index(situps))]
+    if (AgeGroup == '47-51'):
+        SUScore = maleFemale47_51SUScore[int(SitupReps.index(situps))]
+    if (AgeGroup == '52-56'):
+        SUScore = maleFemale52_56SUScore[int(SitupReps.index(situps))]
+    if (AgeGroup == '57-61'):
+        SUScore = maleFemale57_61SUScore[int(SitupReps.index(situps))]
+    if (AgeGroup == '62+'):
+        SUScore = maleFemale62SUScore[int(SitupReps.index(situps))]
     return SUScore
 
 

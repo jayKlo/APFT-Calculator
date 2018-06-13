@@ -16,11 +16,16 @@ def main():
     situps = int(input("Enter the number of situp repetitions completed: "))
     runtimeM = int(input("Enter minutes for 2 mile run time (MM): "))
     runtimeS = int(input("Enter seconds for 2 mile run time (SS): "))
+    while(True):
+        if runtimeS % 6:
+            runtimeS += 1
+        else:
+            break
     runtime = ((runtimeM*60)+(runtimeS))
     AgeBracket = AgeGroup.AgeGroup(age)
-    PUscore = PushUpCalc.PushUpCalc(pushups,AgeBracket)
+    PUscore = PushUpCalc.PushUpCalc(pushups,AgeBracket,gender)
     SUscore = SitUpCalc.SitUpCalc(situps,AgeBracket)
-    Runscore = RunCalc.RunCalc(runtime,AgeBracket)
+    Runscore = RunCalc.RunCalc(runtime,AgeBracket,gender)
     print ("Age Group #{}".format(AgeBracket))
     print ("Gender is: {}".format(gender))
     print ("Pushup score {} ".format(PUscore))

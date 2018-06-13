@@ -25,10 +25,71 @@ male17_21RunScore = [100,99,97,96,94,93,92,90,89,88,86,85,83,82,81,79,78,77,75,7
 #Run Times in seconds
 RunSecondsM17_21 = [i for i in range(780,1590,6)]
 RunSecondsF17_21 = [i for i in range(936,1590,6)]
+RunSecondsM22_26 = [i for i in range(780,1590,6)]
+RunSecondsF22_26 = [i for i in range(936,1590,6)]
+RunSecondsM27_31 = [i for i in range(798,1590,6)]
+RunSecondsF27_31 = [i for i in range(948,1590,6)]
+RunSecondsM32_36 = [i for i in range(798,1590,6)]
+RunSecondsF32_36 = [i for i in range(954,1590,6)]
+RunSecondsM37_41 = [i for i in range(816,1590,6)]
+RunSecondsF37_41 = [i for i in range(1020,1590,6)]
+RunSecondsM42_46 = [i for i in range(840,1590,6)]
+RunSecondsF42_46 = [i for i in range(1044,1590,6)]
+RunSecondsM47_51 = [i for i in range(864,1590,6)]
+RunSecondsF47_51 = [i for i in range(1056,1590,6)]
+RunSecondsM52_56 = [i for i in range(882,1590,6)]
+RunSecondsF52_56 = [i for i in range(1140,1590,6)]
+RunSecondsM57_61 = [i for i in range(918,1590,6)]
+RunSecondsF57_61 = [i for i in range(1182,1590,6)]
+RunSecondsM62 = [i for i in range(942,1590,6)]
+RunSecondsF62 = [i for i in range(1200,1590,6)]
 
-def RunCalc(runtime,AgeGroup):
-    if (AgeGroup == '17-21'):
-        RunScore = female17_21RunScore[int(RunSecondsF17_21.index(runtime))]
+female = ['f','F']
+
+def RunCalc(runtime,AgeGroup,gender):
+    if gender in female:
+        if (AgeGroup == '17-21'):
+            RunScore = female17_21RunScore[int(RunSecondsF17_21.index(runtime))]
+        if (AgeGroup == '22-26'):
+            RunScore = female22_26RunScore[int(RunSecondsF17_21.index(runtime))]
+        if (AgeGroup == '27-31'):
+            RunScore = female27_31RunScore[int(RunSecondsF17_21.index(runtime))]
+        if (AgeGroup == '32-36'):
+            RunScore = female32_36RunScore[int(RunSecondsF17_21.index(runtime))]
+        if (AgeGroup == '37-41'):
+            RunScore = female37_41RunScore[int(RunSecondsF17_21.index(runtime))]
+        if (AgeGroup == '42-46'):
+            RunScore = female42_46RunScore[int(RunSecondsF17_21.index(runtime))]
+        if (AgeGroup == '47-51'):
+            RunScore = female47_51RunScore[int(RunSecondsF17_21.index(runtime))]
+        if (AgeGroup == '52-56'):
+            RunScore = female52_56RunScore[int(RunSecondsF17_21.index(runtime))]
+        if (AgeGroup == '57-61'):
+            RunScore = female57_61RunScore[int(RunSecondsF17_21.index(runtime))]
+        if (AgeGroup == '62+'):
+            RunScore = female62RunScore[int(RunSecondsF17_21.index(runtime))]
+    else:
+        if (AgeGroup == '17-21'):
+            RunScore = male17_21RunScore[int(RunSecondsM17_21.index(runtime))]
+        if (AgeGroup == '22-26'):
+            RunScore = male22_26RunScore[int(RunSecondsM22_26.index(runtime))]
+        if (AgeGroup == '27-31'):
+            RunScore = male27_31RunScore[int(RunSecondsM27_31.index(runtime))]
+        if (AgeGroup == '32-36'):
+            RunScore = male32_36RunScore[int(RunSecondsM32_36.index(runtime))]
+        if (AgeGroup == '37-41'):
+            RunScore = male37_41RunScore[int(RunSecondsM37_41.index(runtime))]
+        if (AgeGroup == '42-46'):
+            RunScore = male42_46RunScore[int(RunSecondsM42_46.index(runtime))]
+        if (AgeGroup == '47-51'):
+            RunScore = male47_51RunScore[int(RunSecondsM47_51.index(runtime))]
+        if (AgeGroup == '52-56'):
+            RunScore = male52_56RunScore[int(RunSecondsM52_56.index(runtime))]
+        if (AgeGroup == '57-61'):
+            RunScore = male57_61RunScore[int(RunSecondsM57_61.index(runtime))]
+        if (AgeGroup == '62+'):
+            RunScore = male62RunScore[int(RunSecondsM62.index(runtime))]
+
     return RunScore
 
 if __name__ == "__main__":
