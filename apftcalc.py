@@ -3,18 +3,24 @@ import SitUpCalc
 import RunCalc
 import AgeGroup
 
-
-age = int(input("Enter your age: "))
-gender = []
-genders = ['M','m','F','f']
-while(True):
-  if gender not in genders:
-    gender = input("Male or Female (M/F): ")
-  else:
-    break
-pushups = int(input("Enter the number of pushup repetitions completed: "))
-situps = int(input("Enter the number of situp repetitions completed: "))
-runtime = input("Enter the 2 mile run time (MM:SS): ")
+def main():
+    age = int(input("Enter your age: "))
+    gender = []
+    genders = ['M','m','F','f']
+    while(True):
+        if gender not in genders:
+            gender = input("Male or Female (M/F): ")
+        else:
+            break
+    pushups = int(input("Enter the number of pushup repetitions completed: "))
+    situps = int(input("Enter the number of situp repetitions completed: "))
+    runtime = input("Enter the 2 mile run time (MM:SS): ")
+    PushUpCalc()
+    SitUpCalc()
+    RunCalc()
+    print ("Pushup score {} ".format(PUscore))
+    print ("Situp score {} ".format(SUscore))
+    print ("Run score {} ".format(Runscore))
 
 #Female Pushups	
 female17_21PUScore = [29,30,32,34,36,37,39,41,43,44,46,48,50,51,53,55,57,58,60,62,63,65,67,69,70,72,74,76,77,79,81,83,84,86,88,90,91,93,95,97,98,100]
@@ -82,6 +88,5 @@ PushupReps = [i for i in range(1,78)]
 SitupReps = [i for i in range(21,82)]
 RunSeconds = [i for i in range(1230,780,-6)]
 
-#print ("Pushup score {} ".format(PUscore))
-#print ("Situp score {} ".format(SUscore))
-#print ("Run score {} ".format(Runscore))
+if __name__ == "__main__":
+    main()
