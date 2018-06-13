@@ -1,4 +1,4 @@
-def AgeGroup():
+def AgeGroup(age):
     if ((age >=17) and (age < 22)):
         AgeGroup = 1
     if ((age >=22) and (age < 27)):
