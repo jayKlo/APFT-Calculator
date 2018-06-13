@@ -23,11 +23,13 @@ male22_26RunScore = [100, 99, 97, 96, 94, 93, 92, 91, 90, 89, 88, 87, 86, 84, 83
 male17_21RunScore = [100,99,97,96,94,93,92,90,89,88,86,85,83,82,81,79,78,77,75,74,72,71,70,68,67,66,64,63,61,60,59,57,56,54,53,52,50,49,48,46,45,43,42,41,39,38,37,35,34,32,31,30,28,27,26,24,23,21,20,19,17,16,14,13,12,10,9,8,6,5,3,2,1]
 
 #Run Times in seconds
-RunSeconds = [i for i in range(1230,780,-6)]
+RunSecondsM17_21 = [i for i in range(780,1590,6)]
+RunSecondsF17_21 = [i for i in range(936,1590,6)]
 
-def RunCalc(pushups,AgeGroup):
-    if (AgeGroup == 1):
-        RunScore = female17_21PUScore[int(pureps.index(pushups))]
+def RunCalc(runtime,AgeGroup):
+    if (AgeGroup == '17-21'):
+        RunScore = female17_21RunScore[int(RunSecondsF17_21.index(runtime))]
+    return RunScore
 
 if __name__ == "__main__":
     main()

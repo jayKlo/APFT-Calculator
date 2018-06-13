@@ -13,9 +13,10 @@ maleFemale62SUScore = [55,56,57,58,59,60,61,62,63,64,65,66,68,69,70,71,72,73,74,
 #Situp Reps
 SitupReps = [i for i in range(21,82)]
 
-def SitUpCalc(pushups,AgeGroup):
-    if (AgeGroup == 1):
-        SUScore = female17_21PUScore[int(pureps.index(pushups))]
+def SitUpCalc(situps,AgeGroup):
+    if (AgeGroup == '17-21'):
+        SUScore = maleFemale17_21SUScore[int(SitupReps.index(situps))]
+    return SUScore
 
 
 if __name__ == "__main__":

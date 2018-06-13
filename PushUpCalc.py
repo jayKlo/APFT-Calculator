@@ -26,8 +26,9 @@ male17_21PUScore = [3, 5, 6, 8, 9, 10, 12, 13, 14, 16, 17, 19, 20, 21, 23, 24, 2
 PushupReps = [i for i in range(1,78)]
 
 def PushUpCalc(pushups,AgeGroup):
-    if (AgeGroup == 1):
+    if (AgeGroup == '17-21'):
         PUScore = female17_21PUScore[int(PushupReps.index(pushups))]
+    return PUScore
 
 if __name__ == "__main__":
     main()
